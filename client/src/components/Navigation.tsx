@@ -77,14 +77,6 @@ export default function Navigation() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="https://github.com/StrengthG/ShakaAI"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost text-xs rounded-none"
-            >
-              GitHub
-            </a>
-            <a
               href="https://drive.google.com/file/d/1KWaUycyDlfhQMUZLJ2P615F-02tZwiHN/view?usp=share_link"
               target="_blank"
               rel="noopener noreferrer"
@@ -124,14 +116,6 @@ export default function Navigation() {
               </a>
             ))}
             <div className="flex gap-3 pt-2">
-              <a
-                href="https://github.com/StrengthG/ShakaAI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost text-xs rounded-none flex-1 text-center"
-              >
-                GitHub
-              </a>
               <a
                 href="https://drive.google.com/file/d/1KWaUycyDlfhQMUZLJ2P615F-02tZwiHN/view?usp=share_link"
                 target="_blank"
