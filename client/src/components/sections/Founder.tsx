@@ -39,7 +39,7 @@ export default function Founder() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-right-bottom opacity-15"
-        style={{ backgroundImage: "url('/manus-storage/shaka-founder-bg_7f09b44e.png')" }}
+        style={{ backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/tbmuJtqkQybGJPCe.png')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#080A0D] via-[#080A0D]/95 to-[#080A0D]/70" />
 

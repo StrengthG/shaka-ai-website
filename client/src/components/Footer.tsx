@@ -19,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2.5 mb-4">
               <img
-                src="/manus-storage/shaka-logo_fac48c32.png"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/hOHijKPVQbaUPgnj.png"
                 alt="SHAKA AI Logo"
                 className="w-8 h-8 object-contain"
               />

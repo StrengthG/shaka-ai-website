@@ -38,7 +38,7 @@ export default function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-        style={{ backgroundImage: "url('/manus-storage/shaka-hero-bg_60f8c405.png')" }}
+        style={{ backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/GVhikPjMnjRiPEAQ.png')" }}
       />
 
       {/* Gradient overlay — strong left fade */}
