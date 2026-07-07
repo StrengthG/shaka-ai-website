@@ -144,32 +144,28 @@ export default function Founder() {
 
                 {/* Portrait area */}
                 <div
-                  className="relative flex items-center justify-center"
-                  style={{ height: "240px", background: "linear-gradient(135deg, #0A0D12 0%, #141920 50%, #0A0D12 100%)" }}
+                  className="relative overflow-hidden"
+                  style={{ height: "300px" }}
                 >
-                  {/* Ndebele geometric pattern background */}
-                  <div className="absolute inset-0 ndebele-pattern opacity-50" />
-
-                  {/* Central identity mark */}
-                  <div className="relative z-10 flex flex-col items-center">
-                    {/* Monogram */}
-                    <div
-                      className="w-24 h-24 border-2 border-amber flex items-center justify-center mb-4 relative"
-                      style={{ background: "#080A0D" }}
-                    >
-                      <div className="absolute top-0 left-0 w-3 h-3 bg-amber" />
-                      <div className="absolute bottom-0 right-0 w-3 h-3 bg-amber" />
-                      <span className="font-display text-4xl text-amber leading-none">SN</span>
-                    </div>
-                    <span className="font-mono-data text-xs text-[#3A4555] tracking-widest">STRENGTH-GIVEN NCUBE</span>
-                  </div>
+                  {/* Founder photo */}
+                  <img
+                    src="/manus-storage/founder-portrait_6f8dfe38.jpeg"
+                    alt="Strength-Given Ncube, Founder & CEO of SHAKA AI"
+                    className="w-full h-full object-cover object-top"
+                  />
+                  {/* Subtle dark overlay at bottom for text legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1318]/80 via-transparent to-transparent" />
 
                   {/* Corner data labels */}
                   <div className="absolute top-3 left-3">
-                    <span className="font-mono-data text-[10px] text-[#3A4555]">ZWE → Global</span>
+                    <span className="font-mono-data text-[10px] text-white/70 bg-[#0A0D12]/60 px-1.5 py-0.5">ZWE → Global</span>
                   </div>
                   <div className="absolute top-3 right-3">
-                    <span className="font-mono-data text-[10px] text-[#3A4555]">2025</span>
+                    <span className="font-mono-data text-[10px] text-white/70 bg-[#0A0D12]/60 px-1.5 py-0.5">2025</span>
+                  </div>
+                  {/* Name overlay at bottom */}
+                  <div className="absolute bottom-3 left-4">
+                    <span className="font-mono-data text-[10px] text-[#3A4555] tracking-widest">STRENGTH-GIVEN NCUBE</span>
                   </div>
                 </div>
 
