@@ -1,5 +1,5 @@
 /**
- * SHAKA AI — Platform Section (Five Features)
+ * SHAKA AI - Platform Section (Five Features)
  * Design: Obsidian Command
  * Layout: Feature cards with amber left-border hover, icon + title + benefit
  */
@@ -16,7 +16,7 @@ const features = [
     ),
     title: "Natural Language Query",
     tagline: "Ask your ERP in plain English. Get structured answers in seconds.",
-    description: "Intent-detection preprocessing routes your question to the correct ERP domain, filters relevant rows, and compresses 18,000 tokens to ~280 before any AI call — delivering fast, accurate, grounded responses.",
+    description: "Intent-detection preprocessing routes your question to the correct ERP domain, filters relevant rows, and compresses 18,000 tokens to ~280 before any AI call. Fast, accurate, grounded responses.",
     badge: "92% token reduction",
     badgeColor: "text-amber",
   },
@@ -28,7 +28,7 @@ const features = [
       </svg>
     ),
     title: "Executive Summary",
-    tagline: "Board-ready briefings tailored to CEO, CFO, COO, and Compliance — on demand.",
+    tagline: "Board-ready briefings tailored to CEO, CFO, COO, and Compliance. On demand.",
     description: "Role-based operational intelligence aggregated from all four ERP datasets. Each briefing presents prioritised KPIs and recommended actions appropriate for the selected executive persona.",
     badge: "4 executive personas",
     badgeColor: "text-amber",
@@ -41,7 +41,7 @@ const features = [
       </svg>
     ),
     title: "Risk Analysis",
-    tagline: "Deterministic risk scoring before any AI call — consistent, auditable, and proactive.",
+    tagline: "Deterministic risk scoring before any AI call. Consistent, auditable, and proactive.",
     description: "A rule-based risk engine scores every entity in the dataset against a severity taxonomy before Claude is invoked. Risk detection is consistent and rule-based; the narrative briefing is human-readable.",
     badge: "Deterministic engine",
     badgeColor: "text-[#EF4444]",
@@ -54,7 +54,7 @@ const features = [
       </svg>
     ),
     title: "Policy Retrieval (RAG)",
-    tagline: "Cited, grounded answers from policy documents — every response traceable to its source.",
+    tagline: "Cited, grounded answers from policy documents. Every response traceable to its source.",
     description: "TF-IDF inverted index over policy documents, with section-aware chunking and relevance scoring. Compliance officers can trace every answer back to the exact policy clause.",
     badge: "TF-IDF + citations",
     badgeColor: "text-[#10B981]",
@@ -119,7 +119,7 @@ export default function Platform() {
           </div>
           <div className="fade-up flex items-end" style={{ transitionDelay: "120ms" }}>
             <p className="text-steel leading-relaxed">
-              Each module serves a distinct user persona — from the analyst querying procurement data to the CFO needing a board briefing in 30 seconds. All five share the same preprocessing engine, risk scorer, and dual-mode runtime.
+              Each module serves a distinct user persona: from the analyst querying procurement data to the CFO needing a board briefing in 30 seconds. All five share the same preprocessing engine, risk scorer, and dual-mode runtime.
             </p>
           </div>
         </div>

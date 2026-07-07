@@ -11,7 +11,7 @@ const roadmapStages = [
     phase: "Phase 1",
     status: "current",
     title: "Working Prototype",
-    subtitle: "v1.0.0 — Released",
+    subtitle: "v1.0.0 Released",
     items: [
       "Mock ERP data (SAP/Oracle schema-equivalent)",
       "5 intelligence modules fully functional",
@@ -113,7 +113,7 @@ export default function Vision() {
           </div>
           <div className="fade-up flex items-end" style={{ transitionDelay: "120ms" }}>
             <p className="text-steel leading-relaxed">
-              African businesses run on ERP data that sits unused because analytics talent is scarce. SHAKA AI democratises access to operational intelligence — starting with the continent that needs it most, then scaling the same infrastructure globally.
+              African businesses run on ERP data that sits unused because analytics talent is scarce.               SHAKA AI democratises access to operational intelligence, starting with the continent that needs it most, then scaling the same infrastructure globally.
             </p>
           </div>
         </div>

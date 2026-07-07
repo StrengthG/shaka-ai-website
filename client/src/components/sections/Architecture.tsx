@@ -1,5 +1,5 @@
 /**
- * SHAKA AI — Architecture Section (How It Works)
+ * SHAKA AI - Architecture Section (How It Works)
  * Design: Obsidian Command
  * Layout: 5-layer visual flow diagram with amber connectors
  */
@@ -11,7 +11,7 @@ const layers = [
     id: 1,
     label: "LAYER 1",
     title: "Data Layer",
-    description: "Mock ERP CSVs structurally equivalent to SAP/Oracle production schemas — Purchase Orders, Inventory, Invoices, Operations",
+    description: "Mock ERP CSVs structurally equivalent to SAP/Oracle production schemas: Purchase Orders, Inventory, Invoices, Operations",
     detail: "25 POs · 15 Inventory · 20 Invoices · 25 Ops records",
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -25,7 +25,7 @@ const layers = [
     id: 2,
     label: "LAYER 2",
     title: "Intelligence / Preprocessing",
-    description: "Intent detection, domain filtering, risk scoring, and token compression — the most technically important layer",
+    description: "Intent detection, domain filtering, risk scoring, and token compression. The most technically important layer.",
     detail: "18,000 tokens → ~280 tokens (92% reduction)",
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -39,7 +39,7 @@ const layers = [
     id: 3,
     label: "LAYER 3",
     title: "AI Layer (Dual-Mode)",
-    description: "Full Mode: Anthropic Claude API. Demo Mode: deterministic fallback engine — no API key required, zero crashes",
+    description: "Full Mode: Anthropic Claude API. Demo Mode: deterministic fallback engine. No API key required, zero crashes.",
     detail: "Full Mode → Claude API · Demo Mode → Offline",
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -53,7 +53,7 @@ const layers = [
     id: 4,
     label: "LAYER 4",
     title: "Retrieval Layer (RAG)",
-    description: "TF-IDF inverted index over policy documents with section-aware chunking and citation generation — Policy RAG only",
+    description: "TF-IDF inverted index over policy documents with section-aware chunking and citation generation. Policy RAG only.",
     detail: "TF-IDF index · Relevance scoring · Citations",
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -67,7 +67,7 @@ const layers = [
     id: 5,
     label: "LAYER 5",
     title: "Presentation Layer",
-    description: "Streamlit UI with Bloomberg Terminal × Palantir design aesthetic — five purpose-built modules for distinct user personas",
+    description: "Streamlit UI with Bloomberg Terminal x Palantir design aesthetic. Five purpose-built modules for distinct user personas.",
     detail: "NL Query · Executive Summary · Risk · Policy · Email",
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -124,7 +124,7 @@ export default function Architecture() {
           </div>
           <div className="fade-up flex items-end" style={{ transitionDelay: "120ms" }}>
             <p className="text-steel leading-relaxed">
-              SHAKA AI is built on five clearly separated architectural layers. Data flows top-to-bottom through each one. Any layer can be replaced — including swapping Claude for GPT-4 or a local LLM — without touching the others.
+              SHAKA AI is built on five clearly separated architectural layers. Data flows top-to-bottom through each one. Any layer can be replaced, including swapping Claude for GPT-4 or a local LLM, without touching the others.
             </p>
           </div>
         </div>
@@ -202,7 +202,7 @@ export default function Architecture() {
               },
               {
                 title: "Deterministic Risk Engine",
-                body: "Risk scores are computed by rule-based logic before any AI call. Risk detection is consistent and auditable — not dependent on LLM output.",
+                body: "Risk scores are computed by rule-based logic before any AI call. Risk detection is consistent and auditable, not dependent on LLM output.",
                 color: "#EF4444",
                 delay: "360ms",
               },
@@ -214,7 +214,7 @@ export default function Architecture() {
               },
               {
                 title: "Schema-Validated Data",
-                body: "Data loaders enforce typed schemas with Int64, str, and float64 casting — the same validation pattern used in production ETL pipelines.",
+                body: "Data loaders enforce typed schemas with Int64, str, and float64 casting. The same validation pattern used in production ETL pipelines.",
                 color: "#F59E0B",
                 delay: "520ms",
               },

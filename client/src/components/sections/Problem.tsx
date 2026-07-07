@@ -74,7 +74,7 @@ export default function Problem() {
               <span className="text-amber italic">It just isn't usable.</span>
             </h2>
             <p className="fade-up text-steel leading-relaxed mb-6" style={{ transitionDelay: "120ms" }}>
-              Every enterprise running SAP, Oracle, or Microsoft Dynamics has enormous operational data locked in ERP systems — purchase orders, inventory records, invoices, approval workflows. That data exists, but it is accessible only to analysts who know SQL, or buried in reports nobody reads until something goes wrong.
+               Every enterprise running SAP, Oracle, or Microsoft Dynamics has enormous operational data locked in ERP systems: purchase orders, inventory records, invoices, approval workflows. That data exists, but it is accessible only to analysts who know SQL, or buried in reports nobody reads until something goes wrong.
             </p>
             <p className="fade-up text-steel leading-relaxed" style={{ transitionDelay: "180ms" }}>
               In Africa, where analytics talent is scarce and ERP adoption is growing rapidly, this bottleneck is acute. Decisions that should take 10 seconds take 3 days. Risk that should be surfaced proactively becomes a crisis.

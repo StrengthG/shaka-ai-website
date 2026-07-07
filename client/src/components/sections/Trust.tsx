@@ -1,5 +1,5 @@
 /**
- * SHAKA AI — Built for Trust Section (Responsible AI)
+ * SHAKA AI - Built for Trust Section (Responsible AI)
  * Design: Obsidian Command
  * Layout: Full-width with geometric pattern background, 4 trust pillars
  */
@@ -14,7 +14,7 @@ const trustPillars = [
       </svg>
     ),
     title: "Grounded Responses",
-    description: "Every answer is grounded in actual ERP data. The preprocessing layer filters and compresses data before the AI call — responses are anchored to real operational records, not generated from general knowledge.",
+    description: "Every answer is grounded in actual ERP data. The preprocessing layer filters and compresses data before the AI call. Responses are anchored to real operational records, not generated from general knowledge.",
     tag: "No hallucination",
   },
   {
@@ -24,7 +24,7 @@ const trustPillars = [
       </svg>
     ),
     title: "Citation-Backed Policy Answers",
-    description: "Policy Retrieval responses include specific document section references. Compliance officers can trace every answer back to its exact source — no ambiguity, no unverifiable claims.",
+    description: "Policy Retrieval responses include specific document section references. Compliance officers can trace every answer back to its exact source. No ambiguity, no unverifiable claims.",
     tag: "Auditable by design",
   },
   {
@@ -34,7 +34,7 @@ const trustPillars = [
       </svg>
     ),
     title: "Deterministic Risk Scoring",
-    description: "Risk scores are computed by a rule-based engine before any AI call is made. Risk detection is consistent, reproducible, and auditable — not subject to LLM variability or prompt drift.",
+    description: "Risk scores are computed by a rule-based engine before any AI call is made. Risk detection is consistent, reproducible, and auditable. Not subject to LLM variability or prompt drift.",
     tag: "Rule-based, not probabilistic",
   },
   {
@@ -44,7 +44,7 @@ const trustPillars = [
       </svg>
     ),
     title: "Human-in-the-Loop Email Drafting",
-    description: "The Email Generator drafts communications for human review and approval — never sends autonomously. Tone and content are configurable, with a one-click revision flow that keeps the human in control.",
+    description: "The Email Generator drafts communications for human review and approval. It never sends autonomously. Tone and content are configurable, with a one-click revision flow that keeps the human in control.",
     tag: "Human oversight preserved",
   },
 ];
@@ -105,7 +105,7 @@ export default function Trust() {
           </div>
           <div className="fade-up flex items-end" style={{ transitionDelay: "120ms" }}>
             <p className="text-steel leading-relaxed">
-              Enterprise AI that cannot be audited cannot be trusted. SHAKA AI is designed from the ground up for accountability — deterministic risk scoring, citation-backed answers, grounded responses, and human oversight at every decision point.
+              Enterprise AI that cannot be audited cannot be trusted. SHAKA AI is designed from the ground up for accountability: deterministic risk scoring, citation-backed answers, grounded responses, and human oversight at every decision point.
             </p>
           </div>
         </div>

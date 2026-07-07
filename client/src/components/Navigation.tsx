@@ -1,6 +1,6 @@
 /**
  * SHAKA AI Navigation
- * Design: Obsidian Command — thin top bar, amber logo mark, monospace brand name
+ * Design: Obsidian Command - thin top bar, amber logo mark, monospace brand name
  * Behavior: transparent on hero, scrolls to opaque with blur
  */
 
@@ -85,8 +85,9 @@ export default function Navigation() {
               GitHub
             </a>
             <a
-              href="#platform"
-              onClick={(e) => handleNavClick(e, "#platform")}
+              href="https://drive.google.com/file/d/1KWaUycyDlfhQMUZLJ2P615F-02tZwiHN/view?usp=share_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-amber text-xs rounded-none"
             >
               See the Demo
@@ -132,8 +133,9 @@ export default function Navigation() {
                 GitHub
               </a>
               <a
-                href="#platform"
-                onClick={(e) => handleNavClick(e, "#platform")}
+                href="https://drive.google.com/file/d/1KWaUycyDlfhQMUZLJ2P615F-02tZwiHN/view?usp=share_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-amber text-xs rounded-none flex-1 text-center"
               >
                 See the Demo

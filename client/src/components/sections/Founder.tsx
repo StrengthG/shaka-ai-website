@@ -1,7 +1,7 @@
 /**
- * SHAKA AI — Founder Section
+ * SHAKA AI - Founder Section
  * Design: Obsidian Command
- * Layout: Asymmetric — bio left, branded executive dossier card right
+ * Layout: Asymmetric - bio left, branded executive dossier card right
  * Founder: Strength-Given Ncube, Founder & CEO
  * Note: Portrait uses branded executive dossier card with amber data-frame language
  */
@@ -61,7 +61,7 @@ export default function Founder() {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-          {/* Left: Bio — takes 3 cols */}
+          {/* Left: Bio - takes 3 cols */}
           <div className="lg:col-span-3">
             <div className="fade-up mb-2" style={{ transitionDelay: "60ms" }}>
               <span className="font-mono-data text-xs text-[#3A4555] tracking-widest uppercase">Founder & CEO</span>
@@ -79,10 +79,10 @@ export default function Founder() {
                 Strength-Given Ncube is an African AI systems builder who built SHAKA AI to solve a problem he observed directly: enterprises across Africa and emerging markets are running on ERP systems full of valuable operational data that nobody can access without a SQL analyst.
               </p>
               <p className="text-[#7A8499] leading-relaxed">
-                His approach is engineering-first. SHAKA AI is not an AI wrapper — it is a purpose-built intelligence layer with a deterministic preprocessing engine, a dual-mode runtime, and a TF-IDF retrieval system designed for auditability and cost efficiency at enterprise scale.
+                His approach is engineering-first. SHAKA AI is not an AI wrapper. It is a purpose-built intelligence layer with a deterministic preprocessing engine, a dual-mode runtime, and a TF-IDF retrieval system designed for auditability and cost efficiency at enterprise scale.
               </p>
               <p className="text-[#7A8499] leading-relaxed">
-                The mission is clear: democratise access to operational intelligence for African enterprises, governments, and SMEs first — then take that same infrastructure global. Africa is not a test market. It is the primary market, and the problems here are the same problems Fortune 500 companies face.
+                The mission is clear: democratise access to operational intelligence for African enterprises, governments, and SMEs first. Then take that same infrastructure global. Africa is not a test market. It is the primary market, and the problems here are the same problems Fortune 500 companies face.
               </p>
             </div>
 
@@ -126,7 +126,7 @@ export default function Founder() {
             </div>
           </div>
 
-          {/* Right: Executive dossier card — 2 cols */}
+          {/* Right: Executive dossier card - 2 cols */}
           <div className="lg:col-span-2 fade-up" style={{ transitionDelay: "360ms" }}>
             <div className="relative">
               {/* Dossier card */}

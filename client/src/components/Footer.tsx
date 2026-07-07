@@ -1,7 +1,7 @@
 /**
- * SHAKA AI — Footer
+ * SHAKA AI - Footer
  * Design: Obsidian Command
- * Layout: Minimal — logo, links, contact, copyright
+ * Layout: Minimal - logo, links, contact, copyright
  */
 
 export default function Footer() {
@@ -31,7 +31,7 @@ export default function Footer() {
               Enterprise operational intelligence platform. An AI layer that converts raw ERP data into decision-ready intelligence.
             </p>
             <span className="font-mono-data text-xs text-amber border border-amber/30 px-2 py-1 bg-amber/5">
-              v1.0.0 — Africa-built · Globally ready
+              v1.0.0 | Africa-built · Globally ready
             </span>
           </div>
 

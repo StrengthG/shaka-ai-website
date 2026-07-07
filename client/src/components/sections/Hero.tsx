@@ -72,7 +72,8 @@ export default function Hero() {
               className="fade-up font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight text-white mb-6"
               style={{ transitionDelay: "60ms" }}
             >
-              Turn operational data into decisions —{" "}
+              Turn operational data into decisions,
+              <br />
               <em className="text-amber not-italic">in plain English.</em>
             </h1>
 
@@ -81,7 +82,7 @@ export default function Hero() {
               className="fade-up text-lg text-[#7A8499] leading-relaxed mb-10 max-w-xl"
               style={{ transitionDelay: "120ms" }}
             >
-              SHAKA AI is an enterprise intelligence layer that sits on top of ERP systems and converts raw operational data into answers, briefings, risk alerts, and drafted communications — in seconds, not days.
+              SHAKA AI is an enterprise intelligence layer that sits on top of ERP systems and converts raw operational data into answers, briefings, risk alerts, and drafted communications. Seconds, not days.
             </p>
 
             {/* CTAs */}
@@ -90,11 +91,9 @@ export default function Hero() {
               style={{ transitionDelay: "180ms" }}
             >
               <a
-                href="#platform"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector("#platform")?.scrollIntoView({ behavior: "smooth" });
-                }}
+                href="https://drive.google.com/file/d/1KWaUycyDlfhQMUZLJ2P615F-02tZwiHN/view?usp=share_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-amber rounded-none inline-flex items-center gap-2 text-sm px-6 py-3"
               >
                 <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
@@ -152,7 +151,7 @@ export default function Hero() {
                     <div className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/50" />
                     <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]/50" />
                   </div>
-                  <span className="font-mono-data text-xs text-[#3A4555] ml-2">shaka_ai v1.0.0 — operational intelligence</span>
+                  <span className="font-mono-data text-xs text-[#3A4555] ml-2">shaka_ai v1.0.0 | operational intelligence</span>
                   <div className="ml-auto">
                     <span className="font-mono-data text-[10px] text-[#10B981] border border-[#10B981]/30 px-1.5 py-0.5 bg-[#10B981]/5">
                       ● DEMO MODE
@@ -237,7 +236,7 @@ export default function Hero() {
                     <div className="mt-2.5 pt-2.5 border-t border-[#1E2530]">
                       <p className="text-xs text-[#7A8499] leading-relaxed">
                         3 POs overdue. Total exposure:{" "}
-                        <span className="text-amber font-mono-data font-semibold">$163,350</span>. Escalate TechFlow Systems — 21d delay exceeds SLA threshold.
+                        <span className="text-amber font-mono-data font-semibold">$163,350</span>. Escalate TechFlow Systems. 21d delay exceeds SLA threshold.
                       </p>
                     </div>
                   </div>
@@ -257,7 +256,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Amber corner accents — amber as structural signal, not decoration */}
+              {/* Amber corner accents - amber as structural signal, not decoration */}
               <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-amber" />
               <div className="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-amber" />
               <div className="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-amber" />
