@@ -132,7 +132,7 @@ export default function Architecture() {
         {/* Architecture diagram */}
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Left: Layer stack */}
-          <div className="lg:col-span-2 space-y-0">
+          <div className="lg:col-span-2 space-y-0 min-w-0">
             {layers.map((layer, i) => (
               <div key={layer.id} className="fade-up" style={{ transitionDelay: `${(i + 1) * 80}ms` }}>
                 <div className="arch-layer p-5 relative">
@@ -143,23 +143,19 @@ export default function Architecture() {
                   />
 
                   <div className="pl-4">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-3">
-                        <div style={{ color: layer.color }} className="mt-0.5 flex-shrink-0">
-                          {layer.icon}
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="font-mono-data text-xs tracking-widest" style={{ color: layer.color }}>
-                              {layer.label}
-                            </span>
-                          </div>
-                          <h3 className="text-sm font-semibold text-white mb-1">{layer.title}</h3>
-                          <p className="text-xs text-steel leading-relaxed">{layer.description}</p>
-                        </div>
+                    <div className="flex items-start gap-3">
+                      <div style={{ color: layer.color }} className="mt-0.5 flex-shrink-0">
+                        {layer.icon}
                       </div>
-                      <div className="flex-shrink-0 text-right">
-                        <span className="font-mono-data text-xs text-steel/60 whitespace-nowrap">{layer.detail}</span>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-mono-data text-xs tracking-widest" style={{ color: layer.color }}>
+                            {layer.label}
+                          </span>
+                        </div>
+                        <h3 className="text-sm font-semibold text-white mb-1">{layer.title}</h3>
+                        <p className="text-xs text-steel leading-relaxed">{layer.description}</p>
+                        <span className="font-mono-data text-xs text-steel/60 mt-1.5 block break-words">{layer.detail}</span>
                       </div>
                     </div>
                   </div>
@@ -182,7 +178,7 @@ export default function Architecture() {
           </div>
 
           {/* Right: Key engineering callouts */}
-          <div className="space-y-4">
+          <div className="space-y-4 min-w-0">
             <div className="fade-up" style={{ transitionDelay: "120ms" }}>
               <h3 className="font-mono-data text-xs text-amber tracking-widest uppercase mb-4">Engineering Highlights</h3>
             </div>
@@ -221,15 +217,15 @@ export default function Architecture() {
             ].map((callout) => (
               <div
                 key={callout.title}
-                className="fade-up border border-[#1E2530] bg-[#0F1318] p-4 relative"
+                className="fade-up border border-[#1E2530] bg-[#0F1318] p-4 relative overflow-hidden"
                 style={{ transitionDelay: callout.delay }}
               >
                 <div
                   className="absolute top-0 left-0 w-3 h-3 border-t border-l"
                   style={{ borderColor: callout.color }}
                 />
-                <h4 className="text-xs font-semibold text-white mb-1.5">{callout.title}</h4>
-                <p className="font-mono-data text-xs text-steel leading-relaxed">{callout.body}</p>
+                <h4 className="text-xs font-semibold text-white mb-1.5 break-words">{callout.title}</h4>
+                <p className="font-mono-data text-xs text-steel leading-relaxed break-words">{callout.body}</p>
               </div>
             ))}
           </div>
