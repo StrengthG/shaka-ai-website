@@ -60,7 +60,7 @@ export default function Founder() {
           <span className="font-mono-data text-xs text-amber tracking-widest uppercase">Founder</span>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start lg:flex-row flex-col-reverse">
           {/* Left: Bio - takes 3 cols */}
           <div className="lg:col-span-3">
             <div className="fade-up mb-2" style={{ transitionDelay: "60ms" }}>
@@ -127,7 +127,7 @@ export default function Founder() {
           </div>
 
           {/* Right: Executive dossier card - 2 cols */}
-          <div className="lg:col-span-2 fade-up" style={{ transitionDelay: "360ms" }}>
+          <div className="lg:col-span-2 fade-up order-first lg:order-last" style={{ transitionDelay: "360ms" }}>
             <div className="relative">
               {/* Dossier card */}
               <div
@@ -143,15 +143,13 @@ export default function Founder() {
                 </div>
 
                 {/* Portrait area */}
-                <div
-                  className="relative overflow-hidden"
-                  style={{ height: "300px" }}
-                >
-                  {/* Founder photo */}
+                <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                  {/* Founder photo — object-position tuned so face is always centred */}
                   <img
                     src="/manus-storage/founder-portrait_6f8dfe38.jpeg"
                     alt="Strength-Given Ncube, Founder & CEO of SHAKA AI"
-                    className="w-full h-full object-cover object-top"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    style={{ objectPosition: "center 20%" }}
                   />
                   {/* Subtle dark overlay at bottom for text legibility */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F1318]/80 via-transparent to-transparent" />
