@@ -184,7 +184,7 @@ export default function Founder() {
                   {[
                     { label: "Role", value: "AI Systems Builder" },
                     { label: "Focus", value: "Enterprise Intelligence" },
-                    { label: "Origin", value: "Africa" },
+                    { label: "Origin", value: "Zimbabwean" },
                     { label: "Mission", value: "Democratise ERP intelligence" },
                     { label: "Status", value: "v1.0.0 shipped" },
                   ].map((row) => (
