@@ -219,6 +219,18 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        // Split vendor libraries into separate chunks for better caching
+        manualChunks: {
+          "react-vendor": ["react", "react-dom"],
+          "motion": ["framer-motion"],
+          "ui-vendor": ["@radix-ui/react-dialog", "@radix-ui/react-tooltip", "@radix-ui/react-dropdown-menu"],
+        },
+      },
+    },
+    // Increase warning threshold slightly (site is content-heavy by design)
+    chunkSizeWarningLimit: 700,
   },
   server: {
     port: 3000,

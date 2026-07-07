@@ -36,10 +36,15 @@ export default function Founder() {
       className="py-24 relative overflow-hidden"
       style={{ background: "#080A0D" }}
     >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-right-bottom opacity-15"
-        style={{ backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/tbmuJtqkQybGJPCe.png')" }}
+      {/* Background image — lazy loaded, decorative only */}
+      <img
+        src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/tbmuJtqkQybGJPCe.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover object-right-bottom opacity-15 pointer-events-none"
+        style={{ zIndex: 0 }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#080A0D] via-[#080A0D]/95 to-[#080A0D]/70" />
 
@@ -148,6 +153,8 @@ export default function Founder() {
                   <img
                     src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/PqnLhFaHsogGzImz.jpeg"
                     alt="Strength-Given Ncube, Founder & CEO of SHAKA AI"
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{ objectPosition: "center 20%" }}
                   />

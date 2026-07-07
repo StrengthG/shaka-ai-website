@@ -52,6 +52,9 @@ export default function Navigation() {
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/hOHijKPVQbaUPgnj.png"
                 alt="SHAKA AI Logo"
+                width="32"
+                height="32"
+                decoding="async"
                 className="w-8 h-8 object-contain"
               />
             </div>

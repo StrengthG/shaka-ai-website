@@ -35,10 +35,15 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{ background: "#080A0D" }}
     >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-        style={{ backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/GVhikPjMnjRiPEAQ.png')" }}
+      {/* Background image — loaded as <img> with lazy decode for faster mobile paint */}
+      <img
+        src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/GVhikPjMnjRiPEAQ.png"
+        alt=""
+        aria-hidden="true"
+        decoding="async"
+        fetchPriority="low"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-40 pointer-events-none"
+        style={{ zIndex: 0 }}
       />
 
       {/* Gradient overlay — strong left fade */}
