@@ -1,25 +1,34 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * SHAKA AI — Home Page
+ * Design: Obsidian Command
+ * Single-page layout with smooth anchor navigation
+ * Sections: Hero → Problem → Platform → Architecture → Trust → Founder → Vision → Footer
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
 
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/sections/Hero";
+import Problem from "@/components/sections/Problem";
+import Platform from "@/components/sections/Platform";
+import Architecture from "@/components/sections/Architecture";
+import Trust from "@/components/sections/Trust";
+import Founder from "@/components/sections/Founder";
+import Vision from "@/components/sections/Vision";
+import Footer from "@/components/Footer";
+
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen" style={{ background: "#080A0D" }}>
+      <Navigation />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        <Problem />
+        <Platform />
+        <Architecture />
+        <Trust />
+        <Founder />
+        <Vision />
       </main>
+      <Footer />
     </div>
   );
 }
