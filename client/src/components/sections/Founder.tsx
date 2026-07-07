@@ -146,7 +146,7 @@ export default function Founder() {
                 <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                   {/* Founder photo — object-position tuned so face is always centred */}
                   <img
-                    src="/manus-storage/founder-portrait_6f8dfe38.jpeg"
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/PqnLhFaHsogGzImz.jpeg"
                     alt="Strength-Given Ncube, Founder & CEO of SHAKA AI"
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{ objectPosition: "center 20%" }}
