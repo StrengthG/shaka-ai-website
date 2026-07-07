@@ -8,24 +8,24 @@ import { useEffect, useRef } from "react";
 
 const problemRows = [
   {
-    problem: "Operational data exists but is not actionable",
-    consequence: "Decisions made on gut feel or outdated reports",
-    solution: "Natural language queries return direct answers in seconds",
+    problem: "ERP data is locked behind SQL and analyst queues",
+    consequence: "Operations managers wait days for answers that should take seconds",
+    solution: "Plain-English queries return direct answers from live ERP data in seconds",
   },
   {
-    problem: "Risk is only identified after it escalates",
-    consequence: "Vendor failures, stockouts, and SLA breaches become crises",
-    solution: "Deterministic risk engine surfaces vendor failures and SLA breaches proactively",
+    problem: "Supplier delays are invisible until production stops",
+    consequence: "Late purchase orders trigger line stoppages and missed export deadlines",
+    solution: "Deterministic risk engine surfaces overdue POs and SLA breaches before they escalate",
   },
   {
-    problem: "Executives receive raw data, not intelligence",
-    consequence: "Boardroom briefings take days to prepare",
-    solution: "Role-typed briefings (CEO/CFO/COO/Compliance) generated on demand",
+    problem: "Executives receive raw data exports, not intelligence",
+    consequence: "Board briefings take days to prepare and are already outdated on delivery",
+    solution: "Role-typed briefings (CEO/CFO/COO/Compliance) generated on demand in 30 seconds",
   },
   {
-    problem: "Policy knowledge is buried in documents",
-    consequence: "Compliance questions go unanswered or answered incorrectly",
-    solution: "RAG-powered retrieval returns exact policy clauses with citations",
+    problem: "Compliance and procurement policy is buried in documents",
+    consequence: "Procurement officers make decisions without checking policy, creating audit risk",
+    solution: "RAG-powered retrieval returns exact policy clauses with citations on demand",
   },
 ];
 
@@ -70,14 +70,14 @@ export default function Problem() {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
             <h2 className="fade-up font-display text-4xl lg:text-5xl text-white leading-tight mb-6" style={{ transitionDelay: "60ms" }}>
-              Enterprise data exists.<br />
-              <span className="text-amber italic">It just isn't usable.</span>
+              The data is there.<br />
+              <span className="text-amber italic">The insight is not.</span>
             </h2>
             <p className="fade-up text-steel leading-relaxed mb-6" style={{ transitionDelay: "120ms" }}>
-               Every enterprise running SAP, Oracle, or Microsoft Dynamics has enormous operational data locked in ERP systems: purchase orders, inventory records, invoices, approval workflows. That data exists, but it is accessible only to analysts who know SQL, or buried in reports nobody reads until something goes wrong.
+              A factory operations manager in Mauritius opens her ERP system on a Monday morning. Purchase orders, inventory levels, supplier invoices, and production schedules are all there. But to find out which supplier orders are running late, she needs a report from an analyst who is already handling three other requests. By the time the answer arrives, the production line has already stopped.
             </p>
             <p className="fade-up text-steel leading-relaxed" style={{ transitionDelay: "180ms" }}>
-              In Africa, where analytics talent is scarce and ERP adoption is growing rapidly, this bottleneck is acute. Decisions that should take 10 seconds take 3 days. Risk that should be surfaced proactively becomes a crisis.
+              Mauritius has a growing manufacturing sector in textiles, food processing, and light industry, with ERP adoption across the board. The analytics layer never followed. Data talent is scarce and expensive. SHAKA AI leapfrogs that gap the same way mobile money leapfrogged banking: by removing the specialist bottleneck entirely and giving operations managers, procurement officers, and executives direct access to the answers already inside their own systems.
             </p>
           </div>
 
@@ -87,13 +87,13 @@ export default function Problem() {
               <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-amber" />
               <div className="font-mono-data text-4xl font-semibold text-amber mb-2">$2.5T</div>
               <div className="text-sm text-white font-medium mb-1">Operational value locked in ERP systems</div>
-              <div className="font-mono-data text-xs text-steel">across African enterprises and SMEs</div>
+              <div className="font-mono-data text-xs text-steel">locked in ERP systems across African manufacturers</div>
             </div>
             <div className="border border-[#1E2530] bg-[#0F1318] p-6 relative">
               <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-amber" />
               <div className="font-mono-data text-4xl font-semibold text-amber mb-2">3 days</div>
               <div className="text-sm text-white font-medium mb-1">Average time to prepare a board briefing</div>
-              <div className="font-mono-data text-xs text-steel">SHAKA AI generates it in 30 seconds</div>
+              <div className="font-mono-data text-xs text-steel">SHAKA AI surfaces it in seconds, no analyst required</div>
             </div>
           </div>
         </div>

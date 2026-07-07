@@ -64,7 +64,7 @@ export default function Hero() {
               <span className="font-mono-data text-xs text-amber tracking-widest uppercase border border-amber/30 px-3 py-1 bg-amber/5">
                 v1.0.0 — Now Available
               </span>
-              <span className="font-mono-data text-xs text-[#3A4555]">Africa-built · Globally ready</span>
+              <span className="font-mono-data text-xs text-[#3A4555]">Mauritius · SADC · Pan-African</span>
             </div>
 
             {/* Main headline */}
@@ -82,7 +82,7 @@ export default function Hero() {
               className="fade-up text-lg text-[#7A8499] leading-relaxed mb-10 max-w-xl"
               style={{ transitionDelay: "120ms" }}
             >
-              SHAKA AI is an enterprise intelligence layer that sits on top of ERP systems and converts raw operational data into answers, briefings, risk alerts, and drafted communications. Seconds, not days.
+              Decision-ready intelligence for African manufacturers, starting in Mauritius. SHAKA AI sits on top of ERP systems and converts raw operational data into plain-English answers, risk alerts, and executive briefings. No SQL. No analyst bottleneck. Seconds, not days.
             </p>
 
             {/* CTAs */}

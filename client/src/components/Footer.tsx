@@ -97,7 +97,7 @@ export default function Footer() {
         <div className="border-t border-[#1E2530] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <span className="font-mono-data text-xs text-steel">
-              © 2025 SHAKA AI. Built by Strength-Given Ncube.
+              © 2026 SHAKA AI. Built by Strength-Given Ncube.
             </span>
           </div>
           <div className="flex items-center gap-4">

@@ -8,63 +8,51 @@ import { useEffect, useRef } from "react";
 
 const roadmapStages = [
   {
-    phase: "Phase 1",
+    phase: "Stage 1",
     status: "current",
-    title: "Working Prototype",
-    subtitle: "v1.0.0 Released",
+    title: "Mauritius Manufacturing",
+    subtitle: "Beachhead market · v1.0.0 prototype ready",
     items: [
-      "Mock ERP data (SAP/Oracle schema-equivalent)",
-      "5 intelligence modules fully functional",
-      "Dual-mode runtime (Claude API + offline fallback)",
-      "Bloomberg × Palantir enterprise UI",
+      "Target: Mauritian manufacturers (textiles, food processing, light industry)",
+      "5 intelligence modules: NL Query, Risk Engine, Briefings, Policy RAG, Email Drafting",
+      "Dual-mode runtime (Claude API + offline fallback for low-connectivity environments)",
+      "ERP connectors: SAP S/4HANA, Oracle Fusion, Microsoft Dynamics",
+      "Prove unit economics and product-market fit with Mauritian operations teams",
     ],
   },
   {
-    phase: "Phase 2",
+    phase: "Stage 2",
     status: "next",
-    title: "Live ERP Connectors",
-    subtitle: "SAP S/4HANA · Oracle Fusion · Microsoft Dynamics",
+    title: "SADC Region Expansion",
+    subtitle: "South Africa · Kenya · Regional manufacturing and logistics hubs",
     items: [
-      "Live API integration with SAP S/4HANA",
-      "Oracle Fusion and Microsoft Dynamics connectors",
-      "Real-time data ingestion pipeline",
-      "Enterprise authentication and access controls",
-      "Pilot deployments with African enterprise partners",
+      "Expand to manufacturing and logistics hubs across the SADC region",
+      "South Africa: mining supply chains, automotive components, retail distribution",
+      "Kenya: export-oriented agriculture, logistics corridors, light manufacturing",
+      "Multi-tenant SaaS platform with self-service onboarding",
+      "Role-based access control, audit logs, and enterprise authentication",
     ],
   },
   {
-    phase: "Phase 3",
+    phase: "Stage 3",
     status: "future",
-    title: "Multi-Tenant SaaS",
-    subtitle: "Africa-first · Then global",
+    title: "Pan-African Enterprise SaaS",
+    subtitle: "Continent-wide · Any ERP · Any sector",
     items: [
-      "Multi-tenant SaaS platform for African enterprises",
-      "Self-service onboarding for SMEs and governments",
-      "Custom policy document ingestion",
-      "Role-based access control and audit logs",
-      "Pan-African expansion: Nigeria, Kenya, South Africa, Egypt",
-    ],
-  },
-  {
-    phase: "Phase 4",
-    status: "future",
-    title: "Global Platform",
-    subtitle: "Enterprise SaaS · Any ERP · Any market",
-    items: [
-      "Global enterprise SaaS offering",
-      "Support for any ERP system via universal connector",
-      "Multi-language support for African and global markets",
-      "Advanced analytics and predictive risk modeling",
-      "Strategic partnerships with ERP vendors",
+      "Full pan-African coverage: Nigeria, Egypt, Ghana, Ethiopia, and beyond",
+      "Universal ERP connector supporting any SAP, Oracle, or Dynamics deployment",
+      "Government and public-sector procurement intelligence modules",
+      "Multi-language support for African enterprise markets",
+      "Strategic partnerships with ERP vendors and regional system integrators",
     ],
   },
 ];
 
 const africaOpportunity = [
-  { stat: "54", label: "African countries", sub: "with growing ERP adoption" },
-  { stat: "$180B", label: "African ERP market", sub: "by 2030 (projected)" },
-  { stat: "1.4B", label: "People served", sub: "by African enterprises" },
-  { stat: "Scarce", label: "Analytics talent", sub: "SHAKA AI fills the gap" },
+  { stat: "Mauritius", label: "Beachhead market", sub: "Manufacturing sector, ERP-ready" },
+  { stat: "SADC", label: "Stage 2 expansion", sub: "South Africa, Kenya, and beyond" },
+  { stat: "Pan-African", label: "End state", sub: "Enterprise SaaS across 54 countries" },
+  { stat: "Scarce", label: "Analytics talent", sub: "The gap SHAKA AI is built to close" },
 ];
 
 export default function Vision() {
@@ -106,13 +94,13 @@ export default function Vision() {
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div>
             <h2 className="fade-up font-display text-4xl lg:text-5xl text-white leading-tight" style={{ transitionDelay: "60ms" }}>
-              Africa first.<br />
-              <span className="text-amber italic">Then the world.</span>
+              Mauritius first.<br />
+              <span className="text-amber italic">Then the continent.</span>
             </h2>
           </div>
           <div className="fade-up flex items-end" style={{ transitionDelay: "120ms" }}>
             <p className="text-steel leading-relaxed">
-              African businesses run on ERP data that sits unused because analytics talent is scarce.               SHAKA AI democratises access to operational intelligence, starting with the continent that needs it most, then scaling the same infrastructure globally.
+              African enterprises adopted ERP systems. The analytics layer never followed, because data talent is scarce and expensive. SHAKA AI proves the model with Mauritian manufacturers, then expands through the SADC region to become the pan-African enterprise intelligence platform. The same way mobile money leapfrogged banking, SHAKA AI leapfrogs the analytics bottleneck.
             </p>
           </div>
         </div>
@@ -192,7 +180,7 @@ export default function Vision() {
         {/* CTA */}
         <div className="fade-up mt-12 text-center" style={{ transitionDelay: "400ms" }}>
           <p className="text-steel mb-6 max-w-xl mx-auto">
-            SHAKA AI is actively seeking partnerships with African enterprises, ERP vendors, and investors who share the vision of democratising operational intelligence.
+            SHAKA AI is actively seeking partnerships with Mauritian manufacturers, SADC-region enterprises, ERP vendors, and investors who share the vision of democratising operational intelligence across Africa.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a

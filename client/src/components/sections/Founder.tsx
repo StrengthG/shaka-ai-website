@@ -159,7 +159,7 @@ export default function Founder() {
                     <span className="font-mono-data text-[10px] text-white/70 bg-[#0A0D12]/60 px-1.5 py-0.5">ZWE → Global</span>
                   </div>
                   <div className="absolute top-3 right-3">
-                    <span className="font-mono-data text-[10px] text-white/70 bg-[#0A0D12]/60 px-1.5 py-0.5">2025</span>
+                    <span className="font-mono-data text-[10px] text-white/70 bg-[#0A0D12]/60 px-1.5 py-0.5">2026</span>
                   </div>
                   {/* Name overlay at bottom */}
                   <div className="absolute bottom-3 left-4">
