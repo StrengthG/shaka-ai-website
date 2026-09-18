@@ -1,9 +1,3 @@
-/**
- * SHAKA AI — Vision & Roadmap Section
- * Design: Obsidian Command
- * Layout: Timeline-style roadmap with Africa-first framing
- */
-
 import { useEffect, useRef } from "react";
 
 const roadmapStages = [
@@ -62,17 +56,13 @@ export default function Vision() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
+          if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
       { threshold: 0.08 }
     );
-
     const elements = sectionRef.current?.querySelectorAll(".fade-up");
     elements?.forEach((el) => observer.observe(el));
-
     return () => observer.disconnect();
   }, []);
 
@@ -80,77 +70,95 @@ export default function Vision() {
     <section
       id="vision"
       ref={sectionRef}
-      className="py-24 relative"
-      style={{ background: "#0F1318" }}
+      className="py-28"
+      style={{ background: "#12372A" }}
     >
-      <div className="container relative z-10">
-        {/* Section label */}
-        <div className="fade-up flex items-center gap-3 mb-6">
-          <div className="w-8 h-px bg-amber" />
-          <span className="font-mono-data text-xs text-amber tracking-widest uppercase">Vision & Roadmap</span>
+      <div className="container">
+        <div className="fade-up mb-4">
+          <span className="font-mono-data text-xs tracking-widest uppercase" style={{ color: "#A8BDAF" }}>
+            Vision & Roadmap
+          </span>
         </div>
 
-        {/* Headline */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <h2 className="fade-up font-display text-4xl lg:text-5xl text-white leading-tight" style={{ transitionDelay: "60ms" }}>
+            <h2
+              className="fade-up font-display text-3xl lg:text-4xl leading-[1.15]"
+              style={{ transitionDelay: "60ms", color: "#FFFFFF" }}
+            >
               Mauritius first.<br />
-              <span className="text-amber italic">Then the continent.</span>
+              Then the continent.
             </h2>
           </div>
           <div className="fade-up flex items-end" style={{ transitionDelay: "120ms" }}>
-            <p className="text-steel leading-relaxed">
+            <p className="text-base leading-relaxed" style={{ color: "#A8BDAF" }}>
               African enterprises adopted ERP systems. The analytics layer never followed, because data talent is scarce and expensive. SHAKA AI proves the model with Mauritian manufacturers, then expands through the SADC region to become the pan-African enterprise intelligence platform. The same way mobile money leapfrogged banking, SHAKA AI leapfrogs the analytics bottleneck.
             </p>
           </div>
         </div>
 
-        {/* Africa opportunity stats */}
-        <div className="fade-up grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16" style={{ transitionDelay: "180ms" }}>
-          {africaOpportunity.map((item) => (
-            <div key={item.label} className="border border-[#1E2530] bg-[#080A0D] p-5 relative">
-              <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-amber/40" />
-              <div className="font-mono-data text-2xl font-semibold text-amber mb-1">{item.stat}</div>
-              <div className="text-xs font-semibold text-white mb-0.5">{item.label}</div>
-              <div className="font-mono-data text-xs text-steel">{item.sub}</div>
+        {/* Opportunity stats */}
+        <div className="fade-up grid grid-cols-2 lg:grid-cols-4 gap-0 mb-16 border border-[rgba(255,255,255,0.08)]" style={{ transitionDelay: "180ms" }}>
+          {africaOpportunity.map((item, i) => (
+            <div
+              key={item.label}
+              className="p-6 border-b lg:border-b-0 border-r last:border-r-0"
+              style={{
+                borderColor: "rgba(255,255,255,0.08)",
+                borderRightColor: i < 3 ? "rgba(255,255,255,0.08)" : "transparent",
+              }}
+            >
+              <div className="font-mono-data text-2xl font-semibold mb-1" style={{ color: "#FFFFFF" }}>
+                {item.stat}
+              </div>
+              <div className="text-xs font-semibold mb-0.5" style={{ color: "#EDF3EF" }}>
+                {item.label}
+              </div>
+              <div className="font-mono-data text-xs" style={{ color: "#A8BDAF" }}>
+                {item.sub}
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Roadmap timeline */}
-        <div className="space-y-4">
+        {/* Roadmap */}
+        <div className="space-y-3">
           {roadmapStages.map((stage, i) => (
             <div
               key={stage.phase}
-              className="fade-up border border-[#1E2530] relative overflow-hidden"
+              className="fade-up border relative overflow-hidden"
               style={{
                 transitionDelay: `${(i + 1) * 80}ms`,
-                background: stage.status === "current" ? "#080A0D" : "#0A0D12",
-                borderColor: stage.status === "current" ? "rgba(245,158,11,0.4)" : "#1E2530",
+                background: stage.status === "current" ? "rgba(36,92,70,0.4)" : "rgba(255,255,255,0.04)",
+                borderColor: stage.status === "current" ? "rgba(168,189,175,0.5)" : "rgba(255,255,255,0.08)",
+                borderLeftWidth: stage.status === "current" ? "3px" : "1px",
+                borderLeftColor: stage.status === "current" ? "#A8BDAF" : "rgba(255,255,255,0.08)",
               }}
             >
-              {/* Current indicator */}
-              {stage.status === "current" && (
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber" />
-              )}
-
-              <div className="p-6 pl-8">
+              <div className="p-6">
                 <div className="grid md:grid-cols-4 gap-6">
-                  {/* Phase info */}
                   <div className="md:col-span-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-mono-data text-xs text-amber tracking-widest">{stage.phase}</span>
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="font-mono-data text-xs tracking-widest" style={{ color: "#A8BDAF" }}>
+                        {stage.phase}
+                      </span>
                       {stage.status === "current" && (
-                        <span className="font-mono-data text-xs text-[#10B981] border border-[#10B981]/30 px-1.5 py-0.5 bg-[#10B981]/5">
+                        <span
+                          className="font-mono-data text-[10px] border px-1.5 py-0.5"
+                          style={{ color: "#EDF3EF", borderColor: "rgba(168,189,175,0.4)", background: "rgba(168,189,175,0.1)" }}
+                        >
                           CURRENT
                         </span>
                       )}
                     </div>
-                    <h3 className="text-sm font-semibold text-white mb-1">{stage.title}</h3>
-                    <p className="font-mono-data text-xs text-steel">{stage.subtitle}</p>
+                    <h3 className="text-sm font-semibold mb-1" style={{ color: "#FFFFFF" }}>
+                      {stage.title}
+                    </h3>
+                    <p className="font-mono-data text-xs" style={{ color: "#A8BDAF" }}>
+                      {stage.subtitle}
+                    </p>
                   </div>
 
-                  {/* Items */}
                   <div className="md:col-span-3">
                     <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
                       {stage.items.map((item) => (
@@ -159,14 +167,14 @@ export default function Vision() {
                             className="w-1 h-1 rounded-full mt-1.5 flex-shrink-0"
                             style={{
                               backgroundColor:
-                                stage.status === "current"
-                                  ? "#F59E0B"
-                                  : stage.status === "next"
-                                  ? "#7A8499"
-                                  : "#3A4555",
+                                stage.status === "current" ? "#A8BDAF"
+                                : stage.status === "next" ? "rgba(168,189,175,0.5)"
+                                : "rgba(168,189,175,0.25)",
                             }}
                           />
-                          <span className="text-xs text-steel leading-relaxed">{item}</span>
+                          <span className="text-xs leading-relaxed" style={{ color: "#A8BDAF" }}>
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -178,21 +186,31 @@ export default function Vision() {
         </div>
 
         {/* CTA */}
-        <div className="fade-up mt-12 text-center" style={{ transitionDelay: "400ms" }}>
-          <p className="text-steel mb-6 max-w-xl mx-auto">
-            SHAKA AI is actively seeking partnerships with Mauritian manufacturers, SADC-region enterprises, ERP vendors, and investors who share the vision of democratising operational intelligence across Africa.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a
-              href="mailto:strengthygivenncube@gmail.com"
-              className="btn-amber rounded-none inline-flex items-center gap-2 text-sm"
-            >
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-              </svg>
-              Get in Touch
-            </a>
-
+        <div className="fade-up mt-16 pt-12 border-t" style={{ transitionDelay: "400ms", borderColor: "rgba(255,255,255,0.08)" }}>
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <p className="text-base leading-relaxed" style={{ color: "#A8BDAF" }}>
+              SHAKA AI is actively seeking partnerships with Mauritian manufacturers, SADC-region enterprises, ERP vendors, and investors who share the vision of democratising operational intelligence across Africa.
+            </p>
+            <div className="flex flex-wrap gap-4 lg:justify-end">
+              <a
+                href="mailto:strengthygivenncube@gmail.com"
+                className="btn-primary"
+                style={{ background: "#FFFFFF", color: "#12372A", borderColor: "#FFFFFF" }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.background = "#EDF3EF";
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#EDF3EF";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.background = "#FFFFFF";
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#FFFFFF";
+                }}
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                Get in Touch
+              </a>
+            </div>
           </div>
         </div>
       </div>

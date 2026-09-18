@@ -1,9 +1,3 @@
-/**
- * SHAKA AI Navigation
- * Design: Obsidian Command - thin top bar, amber logo mark, monospace brand name
- * Behavior: transparent on hero, scrolls to opaque with blur
- */
-
 import { useEffect, useState } from "react";
 
 const navLinks = [
@@ -37,61 +31,61 @@ export default function Navigation() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "nav-scrolled" : "bg-transparent"
+        scrolled ? "nav-scrolled" : "bg-white border-b border-[#DDE3DF]"
       }`}
     >
       <div className="container">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <a
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            className="flex items-center gap-2.5 group"
+            className="flex items-center gap-2.5"
           >
-            <div className="w-8 h-8 flex items-center justify-center">
+            <div className="w-7 h-7 flex items-center justify-center">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663700527934/hOHijKPVQbaUPgnj.png"
                 alt="SHAKA AI Logo"
-                width="32"
-                height="32"
+                width="28"
+                height="28"
                 decoding="async"
-                className="w-8 h-8 object-contain"
+                className="w-7 h-7 object-contain"
               />
             </div>
-            <span className="font-mono-data text-sm font-semibold tracking-widest text-white uppercase">
-              SHAKA<span className="text-amber ml-1">AI</span>
+            <span className="font-mono-data text-sm font-semibold tracking-widest uppercase" style={{ color: "#17201C" }}>
+              SHAKA<span style={{ color: "#245C46" }} className="ml-1">AI</span>
             </span>
           </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-xs font-medium tracking-wider uppercase text-steel hover:text-amber transition-colors duration-150"
+                className="text-xs font-medium tracking-wider uppercase transition-colors duration-150"
+                style={{ color: "#5F6964" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#245C46")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#5F6964")}
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center">
             <a
               href="https://drive.google.com/file/d/1KWaUycyDlfhQMUZLJ2P615F-02tZwiHN/view?usp=share_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-amber text-xs rounded-none"
+              className="btn-primary text-xs"
             >
               See the Demo
             </a>
           </div>
 
-          {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 text-steel hover:text-amber transition-colors"
+            className="lg:hidden p-2 transition-colors"
+            style={{ color: "#5F6964" }}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -104,26 +98,26 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#080A0D] border-t border-steel-border">
-          <div className="container py-4 flex flex-col gap-3">
+        <div className="lg:hidden bg-white border-t border-[#DDE3DF]">
+          <div className="container py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-sm font-medium text-steel hover:text-amber transition-colors py-2 border-b border-[#1E2530]"
+                className="text-sm font-medium py-2.5 border-b border-[#DDE3DF] transition-colors duration-150"
+                style={{ color: "#5F6964" }}
               >
                 {link.label}
               </a>
             ))}
-            <div className="flex gap-3 pt-2">
+            <div className="pt-4">
               <a
                 href="https://drive.google.com/file/d/1KWaUycyDlfhQMUZLJ2P615F-02tZwiHN/view?usp=share_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-amber text-xs rounded-none flex-1 text-center"
+                className="btn-primary text-xs w-full justify-center"
               >
                 See the Demo
               </a>
