@@ -29,18 +29,6 @@ export default function Hero() {
 
           {/* Left: Headline */}
           <div>
-            <div className="fade-up mb-8">
-              <span
-                className="font-mono-data text-xs tracking-widest uppercase border px-3 py-1"
-                style={{ color: "#245C46", borderColor: "#A8BDAF", background: "#EDF3EF" }}
-              >
-                v1.0.0 — Now Available
-              </span>
-              <span className="font-mono-data text-xs ml-4" style={{ color: "#5F6964" }}>
-                Mauritius · SADC · Pan-African
-              </span>
-            </div>
-
             <h1
               className="fade-up font-display text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] leading-[1.1] mb-6"
               style={{ transitionDelay: "60ms", color: "#17201C" }}
