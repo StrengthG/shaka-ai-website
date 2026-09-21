@@ -21,12 +21,6 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-5 max-w-xs" style={{ color: "#A8BDAF" }}>
               Enterprise operational intelligence platform. An AI layer that converts raw ERP data into decision-ready intelligence.
             </p>
-            <span
-              className="font-mono-data text-xs border px-2 py-1"
-              style={{ color: "#A8BDAF", borderColor: "rgba(168,189,175,0.3)" }}
-            >
-              v1.0.0 | Africa-built · Globally ready
-            </span>
           </div>
 
           {/* Navigation */}
@@ -106,15 +100,6 @@ export default function Footer() {
           <span className="font-mono-data text-xs" style={{ color: "#4F7766" }}>
             © 2026 SHAKA AI. Built by Strength-Given Ncube.
           </span>
-          <div className="flex items-center gap-4">
-            <span className="font-mono-data text-xs" style={{ color: "#4F7766" }}>
-              Africa-built · Globally ready
-            </span>
-            <div className="flex items-center gap-1.5">
-              <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#245C46" }} />
-              <span className="font-mono-data text-xs" style={{ color: "#4F7766" }}>v1.0.0</span>
-            </div>
-          </div>
         </div>
       </div>
     </footer>
