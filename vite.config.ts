@@ -203,10 +203,19 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
-
-export default defineConfig({
-  plugins,
+export default defineConfig(({ command }) => ({
+  plugins: [
+    react(),
+    tailwindcss(),
+    jsxLocPlugin(),
+    // Manus dev-only debug tooling (error catcher, session replay, etc.).
+    // Must be excluded from `vite build` output: it injects a ~370KB blocking
+    // inline <script> before #root that has no purpose once deployed and was
+    // found to badly delay first paint (especially on Safari/WebKit).
+    ...(command === "build" ? [] : [vitePluginManusRuntime()]),
+    vitePluginManusDebugCollector(),
+    vitePluginStorageProxy(),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -240,4 +249,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));
